@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast | Modern Weather Dashboard</title>
+    <meta name="description" content="A premium weather dashboard with real-time tracking, 5-day forecasts, and personalized city bookmarks.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside>
+            <div class="logo">
+                <i class="fas fa-cloud-sun-rain"></i>
+                SkyCast
+            </div>
+
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="city-search" placeholder="Search for cities...">
+            </div>
+
+            <div class="saved-cities">
+                <h3 style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-secondary); letter-spacing: 0.1em; margin-bottom: 1rem;">Saved Locations</h3>
+                <div id="history-container">
+                    <!-- History injected here -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard -->
+        <main>
+            <header class="header-row">
+                <div>
+                    <h2 id="greeting-text">Good Afternoon</h2>
+                    <p id="current-date" style="color: var(--text-secondary);"></p>
+                </div>
+
+                <div class="theme-toggle" id="mode-toggle">
+                    <span id="light-icon" class="active"><i class="fas fa-sun"></i></span>
+                    <span id="dark-icon"><i class="fas fa-moon"></i></span>
+                </div>
+            </header>
+
+            <!-- Current Weather Profile -->
+            <section class="weather-card" id="main-weather-root">
+                <!-- Data will be dynamically injected here -->
+                <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 0;">
+                    <i class="fas fa-compass fa-spin" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <h3>Locating Weather Experience...</h3>
+                </div>
+            </section>
+
+            <!-- 5-Day Forecast -->
+            <section>
+                <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">5-Day Forecast</h3>
+                <div class="forecast-section" id="forecast-root">
+                    <!-- Forecast cards injected here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
